@@ -1,7 +1,7 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <cmath>
-//проверка
-//Сделано
+//РїСЂРѕРІРµСЂРєР°
+//РЎРґРµР»Р°РЅРѕ
 
 void Prog2_5() 
 {
@@ -9,11 +9,11 @@ void Prog2_5()
 
     for (x; x <= 4; x += step) 
     {
-        std::cout << "Значение функции при x равном " << x << ":" << std::endl;
+        std::cout << "Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё РїСЂРё x СЂР°РІРЅРѕРј " << x << ":" << std::endl;
 
         if (x == 1)
         {
-            std::cout << "Неопределено" << std::endl;
+            std::cout << "РќРµРѕРїСЂРµРґРµР»РµРЅРѕ" << std::endl;
             continue;
         }
 

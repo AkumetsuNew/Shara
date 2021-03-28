@@ -1,4 +1,4 @@
-#ifndef __PROTOTYPES_H_INCLUDED__
+﻿#ifndef __PROTOTYPES_H_INCLUDED__
 #define __PROTOTYPES_H_INCLUDED__
 #include <string>
 

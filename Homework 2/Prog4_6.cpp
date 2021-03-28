@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <regex>
 #include <map>
 #include "Constants.h"
@@ -15,11 +15,11 @@ void Prog4_6()
     std::map<char, int> m = { {'I', 1}, {'V', 5}, {'X', 10},
         {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000} };
 
-    std::cout << "Ââåäèòå ðèìñêîå ÷èñëî:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð¸Ð¼ÑÐºÐ¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:" << std::endl;
     std::cin >> romeNum;
     if (!std::regex_search(romeNum, romeChecker))
     {
-        std::cout << "Íåïðàâèëüíîå ÷èñëî." << std::endl;
+        std::cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾." << std::endl;
         return;
     }
 
@@ -30,7 +30,7 @@ void Prog4_6()
         else  sum -= m[romeNum[i]];
     }
 
-    std::cout << "Àðàáñêèé ýêâèâàëåíò:" << std::endl
+    std::cout << "ÐÑ€Ð°Ð±ÑÐºÐ¸Ð¹ ÑÐºÐ²Ð¸Ð²Ð°Ð»ÐµÐ½Ñ‚:" << std::endl
         << sum << std::endl;
     return;
 }

@@ -1,31 +1,31 @@
-#include "Constants.h"
+п»ї#include "Constants.h"
 #include "OpenSuccess.h"
 #include <windows.h>
-// Вариант 36
+// Р’Р°СЂРёР°РЅС‚ 36
 
 //#include <filesystem>
 //namespace fs = std::filesystem;
 
 void ClearAndRefill(std::fstream& filestr)
 {
-	// Открытие файла на запись и очистка файла
+	// РћС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р° РЅР° Р·Р°РїРёСЃСЊ Рё РѕС‡РёСЃС‚РєР° С„Р°Р№Р»Р°
 	filestr.open(file3, std::fstream::out | std::fstream::trunc);
 
-	// Проверка открытия
+	// РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ
 	if (!OpenSuccess(filestr))
 		return;
 
-	// Заполнение файла тестовыми словами
+	// Р—Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р° С‚РµСЃС‚РѕРІС‹РјРё СЃР»РѕРІР°РјРё
 	filestr << fileFill;
 
-	// Закрытие файла
+	// Р—Р°РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°
 	filestr.close();
 }
 
 
-// find Возвращает npos, если не найден соответствующий элемент
-// В данном случае мы ищем в строке исключаемых символов элемент c
-// Возвращает true, если такой элемент есть и false, если нет
+// find Р’РѕР·РІСЂР°С‰Р°РµС‚ npos, РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚
+// Р’ РґР°РЅРЅРѕРј СЃР»СѓС‡Р°Рµ РјС‹ РёС‰РµРј РІ СЃС‚СЂРѕРєРµ РёСЃРєР»СЋС‡Р°РµРјС‹С… СЃРёРјРІРѕР»РѕРІ СЌР»РµРјРµРЅС‚ c
+// Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё С‚Р°РєРѕР№ СЌР»РµРјРµРЅС‚ РµСЃС‚СЊ Рё false, РµСЃР»Рё РЅРµС‚
 bool IsExclusion(char c, const std::string& exclude)
 {
 	size_t a = exclude.find(c);
@@ -39,9 +39,9 @@ bool IsExclusion(char c, const std::string& exclude)
 void EraseExclusions(std::string& word, std::string& result, const std::string& exclude)
 {
 	bool wasExcluded = false;
-	// На первом элементе слова итератор не декрементируется,
-	// однако если элемент не первый, можно безопасно 
-	// декрементировать итератор
+	// РќР° РїРµСЂРІРѕРј СЌР»РµРјРµРЅС‚Рµ СЃР»РѕРІР° РёС‚РµСЂР°С‚РѕСЂ РЅРµ РґРµРєСЂРµРјРµРЅС‚РёСЂСѓРµС‚СЃСЏ,
+	// РѕРґРЅР°РєРѕ РµСЃР»Рё СЌР»РµРјРµРЅС‚ РЅРµ РїРµСЂРІС‹Р№, РјРѕР¶РЅРѕ Р±РµР·РѕРїР°СЃРЅРѕ 
+	// РґРµРєСЂРµРјРµРЅС‚РёСЂРѕРІР°С‚СЊ РёС‚РµСЂР°С‚РѕСЂ
 	for (auto strIt = word.begin(); strIt != word.end(); strIt++)
 	{
 		if (!(wasExcluded = IsExclusion(*strIt, exclude)))
@@ -57,20 +57,20 @@ void Prog5_3_2()
 	std::fstream filestr;
 	std::string exclude, word, result;
 
-	// Очистка и заполнение файла
+	// РћС‡РёСЃС‚РєР° Рё Р·Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р°
 	ClearAndRefill(filestr);
 
-	std::cout << "Введите символы, которые хотите исключить из файла" << std::endl;
+	std::cout << "Р’РІРµРґРёС‚Рµ СЃРёРјРІРѕР»С‹, РєРѕС‚РѕСЂС‹Рµ С…РѕС‚РёС‚Рµ РёСЃРєР»СЋС‡РёС‚СЊ РёР· С„Р°Р№Р»Р°" << std::endl;
 	std::cin >> exclude;
 
-	// Открытие файла на чтение и запись
+	// РћС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р° РЅР° С‡С‚РµРЅРёРµ Рё Р·Р°РїРёСЃСЊ
 	filestr.open(file3, std::fstream::in | std::fstream::out | std::fstream::binary);
 
-	// Проверка открытия
+	// РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ
 	if (!OpenSuccess(filestr))
 		return;
 
-	// Занесение данных в строку
+	// Р—Р°РЅРµСЃРµРЅРёРµ РґР°РЅРЅС‹С… РІ СЃС‚СЂРѕРєСѓ
 	while (filestr >> word)
 	{
 		result += '\n';
@@ -82,25 +82,25 @@ void Prog5_3_2()
 	//filestr.seekp(0);
 
 	filestr.close();
-	// Очистка файла
+	// РћС‡РёСЃС‚РєР° С„Р°Р№Р»Р°
 	filestr.open(file3, std::fstream::trunc);
 	if (!OpenSuccess(filestr))
 		return;
 
 	filestr.close();
 
-	// Занесение конечных данных в файл
+	// Р—Р°РЅРµСЃРµРЅРёРµ РєРѕРЅРµС‡РЅС‹С… РґР°РЅРЅС‹С… РІ С„Р°Р№Р»
 	filestr.open(file3);
 	if (!OpenSuccess(filestr))
 		return;
 
-	filestr.write("Конечные данные: ", 17);
+	filestr.write("РљРѕРЅРµС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ: ", 17);
 	filestr.write(result.c_str(), result.length());
 
 	filestr.close();
 
-	// Отображение конечных данных в консоль
-	std::cout << "\nКонечные данные:"
+	// РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РєРѕРЅРµС‡РЅС‹С… РґР°РЅРЅС‹С… РІ РєРѕРЅСЃРѕР»СЊ
+	std::cout << "\nРљРѕРЅРµС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ:"
 		<< result << std::endl;
 	return;
 }

@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <time.h>
 #include <iomanip>
 #include "Constants.h"
-//Сделать для 2 варанта
+//РЎРґРµР»Р°С‚СЊ РґР»СЏ 2 РІР°СЂР°РЅС‚Р°
 int RanNumGen(int s, int var) 
 {
     int m, i, c;
@@ -29,7 +29,7 @@ void RanNumPrint(int &firstNum, int itCount, const int var)
 
     while (itCount)
     {
-        std::cout << "Случайное число №" << i << ":"
+        std::cout << "РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ в„–" << i << ":"
             << std::endl << firstNum << std::endl;
             firstNum = RanNumGen(firstNum, var);
 
@@ -43,22 +43,22 @@ void Prog4_7()
     int s1, s2, itCount;
     std::srand(time(NULL));
 
-    std::cout << "Введите число итераций рандомизации." << std::endl;
+    std::cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РёС‚РµСЂР°С†РёР№ СЂР°РЅРґРѕРјРёР·Р°С†РёРё." << std::endl;
     std::cin >> itCount;
 
     if (itCount <= 0)
     {
-        std::cout << "\nЧисло итераций должно быть положительным." << std::endl;
+        std::cout << "\nР§РёСЃР»Рѕ РёС‚РµСЂР°С†РёР№ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј." << std::endl;
         return;
     }
 
     s1 = std::rand() % var1Mod;
     s2 = std::rand() % var2Mod;
 
-    std::cout << "\nВариант 1:" << std::endl;
+    std::cout << "\nР’Р°СЂРёР°РЅС‚ 1:" << std::endl;
     RanNumPrint(s1, itCount, 1);
 
-    std::cout << "\nВариант 2:" << std::endl;
+    std::cout << "\nР’Р°СЂРёР°РЅС‚ 2:" << std::endl;
     RanNumPrint(s2, itCount, 2);
 
     return;

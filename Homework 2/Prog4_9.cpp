@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 #include "Constants.h"
 
@@ -40,7 +40,7 @@ bool BaseCheck(int base, std::string numAll)
 {
     if (base <= 0 || base >= numAll.length())
     {
-        std::cout << "Îñíîâàíèå äîëæíî áûòü áîëüøå íóëÿ è ìåíüøå 36." << std::endl;
+        std::cout << "ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½ÑƒÐ»Ñ Ð¸ Ð¼ÐµÐ½ÑŒÑˆÐµ 36." << std::endl;
         return false;
     }
     return true;
@@ -62,7 +62,7 @@ bool IsValidNumeral(int baseOld, std::string numOld, std::string numAll)
         }
         if (!isValidNumeral)
         {
-            std::cout << "Ââåäåíà öèôðà, íå ñîîòâåòñòâóþùàÿ îñíîâàíèþ." << std::endl;
+            std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ñ†Ð¸Ñ„Ñ€Ð°, Ð½Ðµ ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð°Ñ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸ÑŽ." << std::endl;
             return false;
         }
     }
@@ -76,13 +76,13 @@ void Prog4_9()
     bool noError = true;
 
 
-    std::cout << "Ââåäèòå îñíîâàíèå ñèñòåìû ñ÷èñëåíèÿ:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹ ÑÑ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ:" << std::endl;
     std::cin >> baseOld;
 
-    std::cout << "Ââåäèòå ÷èñëî â çàäàííîì îñíîâàíèè:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð² Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ð¸:" << std::endl;
     std::cin >> numOld;
 
-    std::cout << "Ââåäèòå îñíîâàíèå íîâîé ñèñòåìû ñ÷èñëåíèÿ:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹ ÑÑ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ:" << std::endl;
     std::cin >> baseNew;
 
     noError = 
@@ -95,6 +95,6 @@ void Prog4_9()
 
     numNew = BaseChange(numOld, baseOld, baseNew);
 
-    std::cout << "\n×èñëî " << numOld << "(" << baseOld << ") â îñíîâàíèè "
+    std::cout << "\nÐ§Ð¸ÑÐ»Ð¾ " << numOld << "(" << baseOld << ") Ð² Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ð¸ "
         << baseNew << ":\n" << numNew << std::endl;
 }

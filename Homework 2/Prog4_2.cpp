@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 int Sign(double x)
 {
@@ -11,8 +11,8 @@ void Prog4_2()
 {
     double num;
 
-    std::cout << "Ââåäèòå ÷èñëî:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾:" << std::endl;
     std::cin >> num;
 
-    std::cout << "Çíàê ÷èñëà:\n" << Sign(num);
+    std::cout << "Ð—Ð½Ð°Ðº Ñ‡Ð¸ÑÐ»Ð°:\n" << Sign(num);
 }

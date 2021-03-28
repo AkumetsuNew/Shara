@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <cmath>
 #include "Constants.h"
-//Выбор фигуры
-//Сделано
+//Р’С‹Р±РѕСЂ С„РёРіСѓСЂС‹
+//РЎРґРµР»Р°РЅРѕ
 
 double RecArea(double a, double b)
 {
@@ -26,7 +26,7 @@ bool ArePositiveValues(double a, double b = 1, double c = 1)
 {
     if (a <= 0 || b <= 0 || c <= 0)
     {
-        std::cout << "Значения должны быть положительными." << std::endl;
+        std::cout << "Р—РЅР°С‡РµРЅРёСЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹РјРё." << std::endl;
         return false;
     }
     return true;
@@ -36,7 +36,7 @@ bool IsValidTriangle(double a, double b, double c)
 {
     if (!(a < b + c && b < a + c && c < a + b))
     {
-        std::cout << "Неправильно введены стороны треугольника." << std::endl;
+        std::cout << "РќРµРїСЂР°РІРёР»СЊРЅРѕ РІРІРµРґРµРЅС‹ СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°." << std::endl;
         return false;
     }
     return true;
@@ -48,56 +48,56 @@ void Prog4_3()
     bool isValid = true;
     int switcher = 0;
 
-    std::cout << "Площадь какой фигуры вычислить?" << std::endl
-        << "1. Прямоугольник" << std::endl
-        << "2. Треугольник" << std::endl
-        << "3. Круг" << std::endl;
+    std::cout << "РџР»РѕС‰Р°РґСЊ РєР°РєРѕР№ С„РёРіСѓСЂС‹ РІС‹С‡РёСЃР»РёС‚СЊ?" << std::endl
+        << "1. РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє" << std::endl
+        << "2. РўСЂРµСѓРіРѕР»СЊРЅРёРє" << std::endl
+        << "3. РљСЂСѓРі" << std::endl;
     std::cin >> switcher;
     
     switch (switcher)
     {
     case 1:
-        //Прямоугольник
-        std::cout << "Введите длину прямоугольника" << std::endl;
+        //РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
+        std::cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°" << std::endl;
         std::cin >> recLen;
-        std::cout << "Введите ширину прямоугольника" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ С€РёСЂРёРЅСѓ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°" << std::endl;
         std::cin >> recWid;
         isValid = ArePositiveValues(recLen, recWid);
         if (isValid)
-            std::cout << "Площадь прямоугольника:" << std::endl
+            std::cout << "РџР»РѕС‰Р°РґСЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°:" << std::endl
             << RecArea(recLen, recWid) << std::endl;
-        //Прямоугольник
+        //РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
         break;
 
     case 2:
-        //Треугольник
-        std::cout << "\nВведите первую сторону треугольника" << std::endl;
+        //РўСЂРµСѓРіРѕР»СЊРЅРёРє
+        std::cout << "\nР’РІРµРґРёС‚Рµ РїРµСЂРІСѓСЋ СЃС‚РѕСЂРѕРЅСѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°" << std::endl;
         std::cin >> triSid1;
-        std::cout << "Введите вторую сторону треугольника" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ РІС‚РѕСЂСѓСЋ СЃС‚РѕСЂРѕРЅСѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°" << std::endl;
         std::cin >> triSid2;
-        std::cout << "Введите третью сторону треугольника" << std::endl;
+        std::cout << "Р’РІРµРґРёС‚Рµ С‚СЂРµС‚СЊСЋ СЃС‚РѕСЂРѕРЅСѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°" << std::endl;
         std::cin >> triSid3;
         isValid = ArePositiveValues(triSid1, triSid2, triSid3) &&
             IsValidTriangle(triSid1, triSid2, triSid3);
         if (isValid)
-            std::cout << "Площадь треугольника:" << std::endl
+            std::cout << "РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°:" << std::endl
             << TriArea(triSid1, triSid2, triSid3) << std::endl;
-        //Треугольник
+        //РўСЂРµСѓРіРѕР»СЊРЅРёРє
         break;
 
     case 3:
-        //Круг
-        std::cout << "\nВведите радиус круга:" << std::endl;
+        //РљСЂСѓРі
+        std::cout << "\nР’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ РєСЂСѓРіР°:" << std::endl;
         std::cin >> cirRad;
         isValid = ArePositiveValues(cirRad);
         if (isValid)
-            std::cout << "Площадь круга:" << std::endl
+            std::cout << "РџР»РѕС‰Р°РґСЊ РєСЂСѓРіР°:" << std::endl
             << CirArea(cirRad) << std::endl;
-        //Круг
+        //РљСЂСѓРі
         break;
 
     default: 
-        std::cout << "Нет такой фигуры." << std::endl;
+        std::cout << "РќРµС‚ С‚Р°РєРѕР№ С„РёРіСѓСЂС‹." << std::endl;
     }
 
     return;

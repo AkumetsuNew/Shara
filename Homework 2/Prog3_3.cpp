@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <fstream>
 #include "Constants.h"
-//Проверка открытия файла
-//Сделано
+//РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°
+//РЎРґРµР»Р°РЅРѕ
 
 void Prog3_3()
 {
@@ -12,7 +12,7 @@ void Prog3_3()
 
     if (!fs.is_open())
     {
-        std::cout << "Файл не открылся" << std::endl;
+        std::cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ" << std::endl;
         return;
     }
 
@@ -22,6 +22,6 @@ void Prog3_3()
 
     fs.close();
 
-    if (answer.empty()) std::cout << "Файл пуст." << std::endl;
+    if (answer.empty()) std::cout << "Р¤Р°Р№Р» РїСѓСЃС‚." << std::endl;
     std::cout << answer << std::endl;
 }

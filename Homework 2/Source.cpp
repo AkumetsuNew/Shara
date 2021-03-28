@@ -1,6 +1,7 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <map>
 #include "Prototypes.h"
+#include <locale>
 
 enum string_code
 {
@@ -73,9 +74,9 @@ int main()
     while (repeatAll)
     {
         std::cin.clear();
-        std::cout << "\n\nÊàêóþ ïðîãðàììó çàïóñòèòü?" << std::endl;
+        std::cout << "\n\nÐšÐ°ÐºÑƒÑŽ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ Ð·Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ?" << std::endl;
         std::cin >> progNum;
-        std::cout << "\n\nÂûïîëíÿåòñÿ ïðîãðàììà " << progNum << "\n" << std::endl;
+        std::cout << "\n\nÐ’Ñ‹Ð¿Ð¾Ð»Ð½ÑÐµÑ‚ÑÑ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° " << progNum << "\n" << std::endl;
 
         switch (hashStringtoEnum(progNum))
         {
@@ -153,11 +154,10 @@ int main()
         case eDefault:
             __fallthrough;
         default:
-            std::cout << "Íåò òàêîé ïðîãðàììû." << std::endl;
-            repeatAll = true;
+            std::cout << "ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð¹ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹." << std::endl;
         }
         std::cin.clear();
-        std::cout << "\n\nÂûáðàòü ïðîãðàììó ñíîâà?(Yes/No)" << std::endl;
+        std::cout << "\n\nÐ’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ ÑÐ½Ð¾Ð²Ð°?(Yes/No)" << std::endl;
         std::cin >> repeat;
         repeatAll = YesNo[repeat];
     }
