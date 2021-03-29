@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Constants.h"
-//×åðåç handle
+//Ð§ÐµÑ€ÐµÐ· handle
 
 void Prog4_4() {
 
-    std::cout << "Ôëàã \"Áûëàÿ Ñëàâà\" 1912 ãîäà.\n" << std::endl;
+    std::cout << "Ð¤Ð»Ð°Ð³ \"Ð‘Ñ‹Ð»Ð°Ñ Ð¡Ð»Ð°Ð²Ð°\" 1912 Ð³Ð¾Ð´Ð°.\n" << std::endl;
 
     for (auto i = 0; i < 6; i++)
         std::cout << Stars << std::endl;

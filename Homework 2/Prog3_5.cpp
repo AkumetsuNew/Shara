@@ -1,11 +1,11 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "Constants.h"
 #include <Windows.h>
 const int firstRusLet = -65;
 const int lastRusLet = 0;
 const int winLen1251 = 256;
-//Подключить windows.h для русских символов
-//Сделано
+//РџРѕРґРєР»СЋС‡РёС‚СЊ windows.h РґР»СЏ СЂСѓСЃСЃРєРёС… СЃРёРјРІРѕР»РѕРІ
+//РЎРґРµР»Р°РЅРѕ
 
 void Prog3_5()
 {
@@ -15,7 +15,7 @@ void Prog3_5()
     std::string letters;
     int charCount[winLen1251] = { 0 };
 
-    std::cout << "Введите буквы" << std::endl;
+    std::cout << "Р’РІРµРґРёС‚Рµ Р±СѓРєРІС‹" << std::endl;
     std::cin >> letters;
 
     for (auto i = 0; i < letters.length(); i++) 
@@ -24,7 +24,7 @@ void Prog3_5()
 
         if (!isalpha(letters[i]) && letters[i] < firstRusLet && letters[i] > lastRusLet)
         {
-            std::cout << "Введён неверный символ" << std::endl;
+            std::cout << "Р’РІРµРґС‘РЅ РЅРµРІРµСЂРЅС‹Р№ СЃРёРјРІРѕР»" << std::endl;
             return;
         }
  
@@ -37,6 +37,6 @@ void Prog3_5()
         for (auto j = 0; j < charCount[i + 128]; j++)
             letters += (char)(i);
 
-    std::cout << "Отсортированная в алфавитном порядке строка:" << std::endl;
+    std::cout << "РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅР°СЏ РІ Р°Р»С„Р°РІРёС‚РЅРѕРј РїРѕСЂСЏРґРєРµ СЃС‚СЂРѕРєР°:" << std::endl;
     std::cout << letters;
 }

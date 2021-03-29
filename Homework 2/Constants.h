@@ -1,4 +1,4 @@
-#ifndef __CONSTANTS_H_INCLUDED__
+ο»Ώ#ifndef __CONSTANTS_H_INCLUDED__
 #define __CONSTANTS_H_INCLUDED__
 
 constexpr auto PI = 3.1415926535;
@@ -12,7 +12,7 @@ constexpr auto EPSILON = 0.001;
 constexpr auto var1Mod = 64;
 constexpr auto var2Mod = 65537;
 constexpr auto file3 = "Text2.txt";
-constexpr auto fileFill = "abcdefghijklmnopqrstuvwxyz ΰαβγδεΈζηθικλμνξοπρςστυφχψωϊϋόύώÿ 123456789";
+constexpr auto fileFill = "abcdefghijklmnopqrstuvwxyz Π°Π±Π²Π³Π΄ΠµΡ‘Π¶Π·ΠΈΠΉΠΊΠ»ΠΌΠ½ΠΎΠΏΡ€ΡΡ‚ΡƒΡ„Ρ…Ρ†Ρ‡ΡΡ‰ΡΡ‹ΡΡΡΡ 123456789";
 
 #define tabA \
 {\

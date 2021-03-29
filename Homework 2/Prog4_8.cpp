@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <time.h>
 #include <iomanip>
 #include "Constants.h"
@@ -53,13 +53,13 @@ void Prog4_8() {
     double B[4][2] = tabB;
     double C[3][2] = { 0 };
 
-    std::cout << "Òàáëèöà À:" << std::endl;
+    std::cout << "Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Ð:" << std::endl;
     MatrixPrint(A);
 
-    std::cout << "Òàáëèöà B:" << std::endl;
+    std::cout << "Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° B:" << std::endl;
     MatrixPrint(B);
 
-    std::cout << "Òàáëèöà C:" << std::endl;
+    std::cout << "Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° C:" << std::endl;
     MatrixMult(A, B, C);
     MatrixPrint(C);
 
@@ -73,19 +73,19 @@ void Prog4_8() {
 
     double total = totalCom + totalMoney;
 
-    std::cout << "\nÁîëüøå âñåãî ñ ïðîäàæè âûðó÷èë ïðîäàâåö ¹" << maxMoneyIndex
-        << ", à èìåííî — " << maxMoney << " ðóáëåé\n"
-        << "Ìåíüøå âñåãî âûðó÷èë ïðîäàâåö ¹" << minMoneyIndex
-        << ", à èìåííî — " << minMoney << " ðóáëåé\n" << std::endl;
+    std::cout << "\nÐ‘Ð¾Ð»ÑŒÑˆÐµ Ð²ÑÐµÐ³Ð¾ Ñ Ð¿Ñ€Ð¾Ð´Ð°Ð¶Ð¸ Ð²Ñ‹Ñ€ÑƒÑ‡Ð¸Ð» Ð¿Ñ€Ð¾Ð´Ð°Ð²ÐµÑ† â„–" << maxMoneyIndex
+        << ", Ð° Ð¸Ð¼ÐµÐ½Ð½Ð¾ â€” " << maxMoney << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n"
+        << "ÐœÐµÐ½ÑŒÑˆÐµ Ð²ÑÐµÐ³Ð¾ Ð²Ñ‹Ñ€ÑƒÑ‡Ð¸Ð» Ð¿Ñ€Ð¾Ð´Ð°Ð²ÐµÑ† â„–" << minMoneyIndex
+        << ", Ð° Ð¸Ð¼ÐµÐ½Ð½Ð¾ â€” " << minMoney << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n" << std::endl;
 
-    std::cout << "Áîëüøå âñåãî êîìèññèîííûõ ïîëó÷èë ïðîäàâåö ¹" << maxComIndex
-        << ", à èìåííî — " << maxCom << " ðóáëåé\n"
-        << "Ìåíüøå âñåãî ïîëó÷èë ïðîäàâåö ¹" << minComIndex
-        << ", à èìåííî — " << minCom << " ðóáëåé\n" << std::endl;
+    std::cout << "Ð‘Ð¾Ð»ÑŒÑˆÐµ Ð²ÑÐµÐ³Ð¾ ÐºÐ¾Ð¼Ð¸ÑÑÐ¸Ð¾Ð½Ð½Ñ‹Ñ… Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð¿Ñ€Ð¾Ð´Ð°Ð²ÐµÑ† â„–" << maxComIndex
+        << ", Ð° Ð¸Ð¼ÐµÐ½Ð½Ð¾ â€” " << maxCom << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n"
+        << "ÐœÐµÐ½ÑŒÑˆÐµ Ð²ÑÐµÐ³Ð¾ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð¿Ñ€Ð¾Ð´Ð°Ð²ÐµÑ† â„–" << minComIndex
+        << ", Ð° Ð¸Ð¼ÐµÐ½Ð½Ð¾ â€” " << minCom << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n" << std::endl;
 
 
-    std::cout << "Îáùàÿ âûðó÷êà:\n" << totalMoney << " ðóáëåé\n"
-        << "Îáùèå êîìèññèîííûå:\n" << totalCom << " ðóáëåé\n"
-        << "Âñåãî äåíåã ïðîøëî:\n" << total << " ðóáëåé" << std::endl;
+    std::cout << "ÐžÐ±Ñ‰Ð°Ñ Ð²Ñ‹Ñ€ÑƒÑ‡ÐºÐ°:\n" << totalMoney << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n"
+        << "ÐžÐ±Ñ‰Ð¸Ðµ ÐºÐ¾Ð¼Ð¸ÑÑÐ¸Ð¾Ð½Ð½Ñ‹Ðµ:\n" << totalCom << " Ñ€ÑƒÐ±Ð»ÐµÐ¹\n"
+        << "Ð’ÑÐµÐ³Ð¾ Ð´ÐµÐ½ÐµÐ³ Ð¿Ñ€Ð¾ÑˆÐ»Ð¾:\n" << total << " Ñ€ÑƒÐ±Ð»ÐµÐ¹" << std::endl;
     return;
 }

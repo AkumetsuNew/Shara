@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <fstream>
 #include "Constants.h"
-//Проверка открытия файла
-//Сделано
+//РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°
+//РЎРґРµР»Р°РЅРѕ
 
 std::string Prog3_4()
 {
@@ -11,13 +11,13 @@ std::string Prog3_4()
     std::fstream fs(file2);
 
     if (!fs.is_open())
-        return "Файл не открылся";
+        return "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ";
 
     while (fs.get(c))
         if (isdigit(c)) answer += c;
 
     fs.close();
 
-    if (answer.empty()) return "Нет цифр.";
+    if (answer.empty()) return "РќРµС‚ С†РёС„СЂ.";
     return answer;
 }

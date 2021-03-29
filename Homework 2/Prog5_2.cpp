@@ -1,12 +1,12 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 
-// Перегрузка для динамического массива
+// РџРµСЂРµРіСЂСѓР·РєР° РґР»СЏ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void PrimeChecker(int* &primes2, int& primesFound, int numberChecked)
 {
 	bool isPrime = true;
 
-	// Проверяет делимость на все ранее найденые простые числа
+	// РџСЂРѕРІРµСЂСЏРµС‚ РґРµР»РёРјРѕСЃС‚СЊ РЅР° РІСЃРµ СЂР°РЅРµРµ РЅР°Р№РґРµРЅС‹Рµ РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°
 	for (auto j = 0; j < primesFound; j++)
 		if (numberChecked % primes2[j] == 0)
 		{
@@ -14,7 +14,7 @@ void PrimeChecker(int* &primes2, int& primesFound, int numberChecked)
 			break;
 		}
 
-	// Добавляет найденное простое число к вектору простых
+	// Р”РѕР±Р°РІР»СЏРµС‚ РЅР°Р№РґРµРЅРЅРѕРµ РїСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ Рє РІРµРєС‚РѕСЂСѓ РїСЂРѕСЃС‚С‹С…
 	if (isPrime)
 	{
 		primes2[primesFound] = numberChecked;
@@ -26,7 +26,7 @@ void PrimeChecker(std::vector<int> &primes, int &primesFound, int numberChecked)
 {
 	bool isPrime = true;
 
-	// Проверяет делимость на все ранее найденые простые числа
+	// РџСЂРѕРІРµСЂСЏРµС‚ РґРµР»РёРјРѕСЃС‚СЊ РЅР° РІСЃРµ СЂР°РЅРµРµ РЅР°Р№РґРµРЅС‹Рµ РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°
 	for (auto j = 0; j < primesFound; j++)
 		if (numberChecked % primes[j] == 0)
 		{
@@ -34,7 +34,7 @@ void PrimeChecker(std::vector<int> &primes, int &primesFound, int numberChecked)
 			break;
 		}
 
-	// Добавляет найденное простое число к вектору простых
+	// Р”РѕР±Р°РІР»СЏРµС‚ РЅР°Р№РґРµРЅРЅРѕРµ РїСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ Рє РІРµРєС‚РѕСЂСѓ РїСЂРѕСЃС‚С‹С…
 	if (isPrime)
 	{
 		primes[primesFound] = numberChecked;
@@ -47,36 +47,36 @@ void Prog5_2()
 	int upperBound, method, primesFound = 1;
 	std::vector<int> primes;
 
-	// Ввод данных
-	std::cout << "Алгоритм Решета Эратосфена для поиска простых чисел в диапазоне от 2 до заданного.\n" << std::endl;
-	std::cout << "Введите число, до которого будет вестись поиск:" << std::endl;
+	// Р’РІРѕРґ РґР°РЅРЅС‹С…
+	std::cout << "РђР»РіРѕСЂРёС‚Рј Р РµС€РµС‚Р° Р­СЂР°С‚РѕСЃС„РµРЅР° РґР»СЏ РїРѕРёСЃРєР° РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР» РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 2 РґРѕ Р·Р°РґР°РЅРЅРѕРіРѕ.\n" << std::endl;
+	std::cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, РґРѕ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РІРµСЃС‚РёСЃСЊ РїРѕРёСЃРє:" << std::endl;
 	std::cin >> upperBound;
 
-	// Проверка ввода
+	// РџСЂРѕРІРµСЂРєР° РІРІРѕРґР°
 	if (upperBound <= 1)
 	{
-		std::cout << "Число должно быть больше единицы!" << std::endl;
+		std::cout << "Р§РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РµРґРёРЅРёС†С‹!" << std::endl;
 		return;
 	}
 
-	std::cout << "Каким способом делать?"
-		<< "\n1. Чеоез векторы"
-		<< "\n2. Через динамические массивы" << std::endl;
+	std::cout << "РљР°РєРёРј СЃРїРѕСЃРѕР±РѕРј РґРµР»Р°С‚СЊ?"
+		<< "\n1. Р§РµРѕРµР· РІРµРєС‚РѕСЂС‹"
+		<< "\n2. Р§РµСЂРµР· РґРёРЅР°РјРёС‡РµСЃРєРёРµ РјР°СЃСЃРёРІС‹" << std::endl;
 	std::cin >> method;
 	
 	switch (method)
 	{
 	case 1:
-		// Задание размера вектора и первого элемента
+		// Р—Р°РґР°РЅРёРµ СЂР°Р·РјРµСЂР° РІРµРєС‚РѕСЂР° Рё РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 		primes.resize(ceil((double)upperBound / 2));
 		primes[0] = 2;
 
 
-		// Поиск простых
+		// РџРѕРёСЃРє РїСЂРѕСЃС‚С‹С…
 		for (auto number = 3; number <= upperBound; number++)
 			PrimeChecker(primes, primesFound, number);
 
-		// Вывод
+		// Р’С‹РІРѕРґ
 		for (auto i = 0; i < primesFound; i++)
 			std::cout << std::endl << i + 1 << ". " << primes[i];
 		
@@ -85,15 +85,15 @@ void Prog5_2()
 
 	case 2:
 	{
-		// Задание размера массива и первого элемента
+		// Р—Р°РґР°РЅРёРµ СЂР°Р·РјРµСЂР° РјР°СЃСЃРёРІР° Рё РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 		int* primes2 = new int[ceil((double)upperBound / 2)];
 		primes2[0] = 2;
 
-		// Поиск простых
+		// РџРѕРёСЃРє РїСЂРѕСЃС‚С‹С…
 		for (auto number = 3; number <= upperBound; number++)
 			PrimeChecker(primes2, primesFound, number);
 
-		// Вывод
+		// Р’С‹РІРѕРґ
 		for (auto i = 0; i < primesFound; i++)
 			std::cout << std::endl << i + 1 << ". " << primes2[i];
 
@@ -101,7 +101,7 @@ void Prog5_2()
 		break;
 	}
 	default:
-		std::cout << "Введён неправильный номер способа." << std::endl;
+		std::cout << "Р’РІРµРґС‘РЅ РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ СЃРїРѕСЃРѕР±Р°." << std::endl;
 	}
 	return;
 }

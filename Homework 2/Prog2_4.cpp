@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 
 void Prog2_4() 
@@ -7,29 +7,29 @@ void Prog2_4()
     int a;
     bool c;
 
-    std::cout << "Ââåäèòå öåëîå ÷èñëî:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:" << std::endl;
     std::cin >> n;
 
     if (n != (long long)n)
     {
-        std::cout << "×èñëî íå öåëîå";
+        std::cout << "Ð§Ð¸ÑÐ»Ð¾ Ð½Ðµ Ñ†ÐµÐ»Ð¾Ðµ";
         return;
     }
 
-    std::cout << "Ââåäèòå èíòåðâàë:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ñ‚ÐµÑ€Ð²Ð°Ð»:" << std::endl;
     std::cin >> a;
     if (a <= 0)
     {
-        std::cout << "Èíòåðâàë äîëæåí áûòü ïîëîæèòåëüíûì" << std::endl;
+        std::cout << "Ð˜Ð½Ñ‚ÐµÑ€Ð²Ð°Ð» Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼" << std::endl;
         return;
     }
 
-    std::cout << "Ââåäèòå 1, åñëè îòñ÷¸ò âåä¸òñÿ âïåð¸ä èëè 0, åñëè íàçàä:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1, ÐµÑÐ»Ð¸ Ð¾Ñ‚ÑÑ‡Ñ‘Ñ‚ Ð²ÐµÐ´Ñ‘Ñ‚ÑÑ Ð²Ð¿ÐµÑ€Ñ‘Ð´ Ð¸Ð»Ð¸ 0, ÐµÑÐ»Ð¸ Ð½Ð°Ð·Ð°Ð´:" << std::endl;
     std::cin >> c;
 
     int c1 = n + a, c0 = n - a;
 
-    std::cout << "Îòâåò:" << std::endl;
+    std::cout << "ÐžÑ‚Ð²ÐµÑ‚:" << std::endl;
 
     for (n; c ? n < c1 : n > c0; c ? n++ : n--) 
         std::cout << n << std::endl;

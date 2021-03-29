@@ -1,38 +1,38 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <fstream>
 #include <string>
-//Проверка открытия файла
-//Сделано
+//РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°
+//РЎРґРµР»Р°РЅРѕ
 
 void Prog4_1() 
 {
-    // Создание файла
+    // РЎРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°
     std::string FILENAME, inputarr, input;
     std::fstream fs;
-    std::cout << "Введите название файла:" << std::endl;
+    std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р°:" << std::endl;
     std::cin >> FILENAME;
     FILENAME += ".txt";
 
-    // Заполнение файла
+    // Р—Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р°
     fs.open(FILENAME, std::fstream::out);
 
     if (!fs.is_open())
     {
-        std::cout << "Файл не открылся" << std::endl;
+        std::cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ" << std::endl;
         return;
     }
 
-    std::cout << "\nВведите 10 чисел (знак дроби вводить через запятую):" << std::endl;
+    std::cout << "\nР’РІРµРґРёС‚Рµ 10 С‡РёСЃРµР» (Р·РЅР°Рє РґСЂРѕР±Рё РІРІРѕРґРёС‚СЊ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ):" << std::endl;
     for (auto i = 0; i < 10; i++)
     {
-        std::cout << "Число " << i + 1 << ":" << std::endl;
+        std::cout << "Р§РёСЃР»Рѕ " << i + 1 << ":" << std::endl;
         std::cin >> input;
         inputarr += input + ' ';
     }
     fs << inputarr;
     fs.close();
 
-    //Чтение файла
+    //Р§С‚РµРЅРёРµ С„Р°Р№Р»Р°
     double answer = 0;
     char c;
     std::string numbers;
@@ -40,7 +40,7 @@ void Prog4_1()
 
     if (!fs.is_open())
     {
-        std::cout << "Файл не открылся" << std::endl;
+        std::cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ" << std::endl;
         return;
     }
 
@@ -58,7 +58,7 @@ void Prog4_1()
     }
     fs.close();
 
-    //Вывод ответа
-    std::cout << "Сумма чисел в файле:" << std::endl;
+    //Р’С‹РІРѕРґ РѕС‚РІРµС‚Р°
+    std::cout << "РЎСѓРјРјР° С‡РёСЃРµР» РІ С„Р°Р№Р»Рµ:" << std::endl;
     std::cout << answer << std::endl;
 }

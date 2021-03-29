@@ -1,10 +1,10 @@
-#include "OpenSuccess.h"
+ï»¿#include "OpenSuccess.h"
 
 bool OpenSuccess(std::fstream& fs)
 {
     if (!fs.is_open())
     {
-        std::cout << "Íå óäàëîñü îòêðûòü ôàéë." << std::endl;
+        std::cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ð°Ð¹Ð»." << std::endl;
         return false;
     }
     return true;

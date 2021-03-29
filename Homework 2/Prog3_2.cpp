@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <cmath>
 #include "Constants.h"
@@ -28,17 +28,17 @@ std::string Prog3_2()
     double S, n, m, r = 0, rnext, p = 0, diff, diffprev = 0, diffnext;
     bool isClosest;
 
-    std::cout << "Ââåäèòå ñóììó çàéìà:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑƒÐ¼Ð¼Ñƒ Ð·Ð°Ð¹Ð¼Ð°:" << std::endl;
     std::cin >> S;
-    if (S <= 0) return "Íåïðàâèëüíàÿ ñóììà çàéìà";
+    if (S <= 0) return "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð°Ñ ÑÑƒÐ¼Ð¼Ð° Ð·Ð°Ð¹Ð¼Ð°";
 
-    std::cout << "Ââåäèòå ñðîê çàéìà (â ãîäàõ):" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ€Ð¾Ðº Ð·Ð°Ð¹Ð¼Ð° (Ð² Ð³Ð¾Ð´Ð°Ñ…):" << std::endl;
     std::cin >> n;
-    if (n <= 0) return "Íåïðàâèëüíûé ñðîê çàéìà";
+    if (n <= 0) return "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ ÑÑ€Ð¾Ðº Ð·Ð°Ð¹Ð¼Ð°";
 
-    std::cout << "Ââåäèòå ìåñÿ÷íóþ âûïëàòó çàéìà:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ‡Ð½ÑƒÑŽ Ð²Ñ‹Ð¿Ð»Ð°Ñ‚Ñƒ Ð·Ð°Ð¹Ð¼Ð°:" << std::endl;
     std::cin >> m;
-    if (m <= 0) return "Íåïðàâèëüíàÿ ìåñÿ÷íàÿ âûïëàòà";
+    if (m <= 0) return "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð°Ñ Ð¼ÐµÑÑÑ‡Ð½Ð°Ñ Ð²Ñ‹Ð¿Ð»Ð°Ñ‚Ð°";
 
     while (!p) 
     {
@@ -52,6 +52,6 @@ std::string Prog3_2()
 
     std::string pret(std::to_string(p));
 
-    std::cout << "Ïðîöåíò çàéìà:" << std::endl;
+    std::cout << "ÐŸÑ€Ð¾Ñ†ÐµÐ½Ñ‚ Ð·Ð°Ð¹Ð¼Ð°:" << std::endl;
     return pret;
 }
