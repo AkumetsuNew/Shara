@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <string>
 #include <cmath>
 #include "Constants.h"
 
@@ -23,22 +22,34 @@ bool CheckForClosest(double r, double S, double n, double m,
     return isClosest;
 }
 
-std::string Prog3_2() 
+void Prog3_2() 
 {
     double S, n, m, r = 0, rnext, p = 0, diff, diffprev = 0, diffnext;
     bool isClosest;
 
     std::cout << "Введите сумму займа:" << std::endl;
     std::cin >> S;
-    if (S <= 0) return "Неправильная сумма займа";
+    if (S <= 0)
+    {
+        std::cout << "Неправильная сумма займа" << std::endl;
+        return;
+    }
 
     std::cout << "Введите срок займа (в годах):" << std::endl;
     std::cin >> n;
-    if (n <= 0) return "Неправильный срок займа";
+    if (n <= 0)
+    {
+        std::cout << "Неправильный срок займа";
+        return;
+    }
 
     std::cout << "Введите месячную выплату займа:" << std::endl;
     std::cin >> m;
-    if (m <= 0) return "Неправильная месячная выплата";
+    if (m <= 0)
+    {
+        std::cout << "Неправильная месячная выплата" << std::endl;
+        return;
+    }
 
     while (!p) 
     {
@@ -50,8 +61,8 @@ std::string Prog3_2()
         diffprev = diff;
     }
 
-    std::string pret(std::to_string(p));
+    
 
-    std::cout << "Процент займа:" << std::endl;
-    return pret;
+    std::cout << "Процент займа: \n" << p << std::endl;
+    return;
 }

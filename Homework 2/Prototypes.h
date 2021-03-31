@@ -4,10 +4,10 @@
 
 void Prog2_4();
 void Prog2_5();
-std::string Prog3_1();
-std::string Prog3_2();
+void Prog3_1();
+void Prog3_2();
 void Prog3_3();
-std::string Prog3_4();
+void Prog3_4();
 void Prog3_5();
 void Prog4_1();
 void Prog4_2();

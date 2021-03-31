@@ -87,16 +87,16 @@ int main()
             Prog2_5();
             break;
         case eProg3_1:
-            std::cout << Prog3_1();
+            Prog3_1();
             break;
         case eProg3_2:
-            std::cout << Prog3_2();
+            Prog3_2();
             break;
         case eProg3_3:
             Prog3_3();
             break;
         case eProg3_4:
-            std::cout << Prog3_4();
+            Prog3_4();
             break;
         case eProg3_5:
             Prog3_5();

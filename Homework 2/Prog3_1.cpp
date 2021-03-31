@@ -4,27 +4,38 @@
 // Исправить проценты не больше 100
 // Сделано
 
-std::string Prog3_1() 
+void Prog3_1() 
 {
     double S, n, p;
 
     std::cout << "Введите сумму займа:" << std::endl;
     std::cin >> S;
-    if (S <= 0) return "Неправильная сумма займа";
+    if (S <= 0) 
+    {
+        std::cout << "Неправильная сумма займа" << std::endl;
+        return;
+    }
 
     std::cout << "Введите срок займа (в годах):" << std::endl;
     std::cin >> n;
-    if (n <= 0) return "Неправильный срок займа";
+    if (n <= 0) 
+    {
+        std::cout << "Неправильный срок займа";
+        return;
+    }
 
     std::cout << "Введите процент займа:" << std::endl;
     std::cin >> p;
-    if (p <= 0 || p > 100) return "Неправильный процент займа";
+    if (p <= 0 || p > 100)
+    {
+        std::cout << "Неправильный процент займа" << std::endl;
+        return;
+    }
 
     double r = p / 100;
     float m = (S * r * pow(1 + r, n)) / (12 * (pow(1 + r, n) - 1));
 
-    std::string mret(std::to_string(m));
 
-    std::cout << "Ежемесячная выплата:" << std::endl;
-    return mret;
+    std::cout << "Ежемесячная выплата:\n" << m << std::endl;
+    return;
 }
