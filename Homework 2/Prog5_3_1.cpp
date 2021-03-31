@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <algorithm>
 #include "OpenSuccess.h"
 
 //const std::string consonants = "бвгджзйклмнпрстфхцчшщъь";
@@ -156,6 +157,7 @@ void Prog5_3_1()
     std::cout << "Введите текст:\n";
     std::cin.ignore();
     std::getline(std::cin, inputarr);
+    std::transform(inputarr.begin(), inputarr.end(), inputarr.begin(), ::std::tolower);
     fs << inputarr;
     
     // Закрытие файла
