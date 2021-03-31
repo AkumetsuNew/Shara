@@ -1,7 +1,8 @@
 ﻿// Вариант 10
-#include "OpenSuccess.h"
+#include <iostream>
 #include <string>
 #include <windows.h>
+#include "OpenSuccess.h"
 
 //const std::string consonants = "бвгджзйклмнпрстфхцчшщъь";
 const std::string vowels = "аеёиоуыэюя";

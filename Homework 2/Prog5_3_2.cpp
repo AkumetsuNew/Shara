@@ -1,6 +1,7 @@
-﻿#include "Constants.h"
-#include "OpenSuccess.h"
+﻿#include <iostream>
 #include <windows.h>
+#include "Constants.h"
+#include "OpenSuccess.h"
 // Вариант 36
 
 //#include <filesystem>

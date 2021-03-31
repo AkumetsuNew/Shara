@@ -1,7 +1,8 @@
-﻿#include "OpenSuccess.h"
+﻿#include <iostream>
 #include <Windows.h>
 #include <string>
 #include <set>
+#include "OpenSuccess.h"
 
 const char firstRusLet = -65;
 const char lastRusCapitalLet = -33;

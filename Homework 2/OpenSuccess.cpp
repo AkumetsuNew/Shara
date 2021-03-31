@@ -1,4 +1,5 @@
-﻿#include "OpenSuccess.h"
+﻿#include <iostream>
+#include "OpenSuccess.h"
 
 bool OpenSuccess(std::fstream& fs)
 {
