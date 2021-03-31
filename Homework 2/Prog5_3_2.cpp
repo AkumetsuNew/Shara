@@ -38,15 +38,12 @@ bool IsExclusion(char c, const std::string& exclude)
 
 void EraseExclusions(std::string& word, std::string& result, const std::string& exclude)
 {
-	bool wasExcluded = false;
-	// На первом элементе слова итератор не декрементируется,
-	// однако если элемент не первый, можно безопасно 
-	// декрементировать итератор
 	for (auto strIt = word.begin(); strIt != word.end(); strIt++)
 	{
-		if (!(wasExcluded = IsExclusion(*strIt, exclude)))
+		if (!IsExclusion(*strIt, exclude))
 			result += *strIt;
 	}
+	return;
 }
 
 void Prog5_3_2() 
@@ -64,7 +61,7 @@ void Prog5_3_2()
 	std::cin >> exclude;
 
 	// Открытие файла на чтение и запись
-	filestr.open(file3, std::fstream::in | std::fstream::out | std::fstream::binary);
+	filestr.open(file3, std::fstream::in | std::fstream::out);
 
 	// Проверка открытия
 	if (!OpenSuccess(filestr))
@@ -83,7 +80,9 @@ void Prog5_3_2()
 
 	filestr.close();
 	// Очистка файла
-	filestr.open(file3, std::fstream::trunc);
+
+	filestr.open(file3, std::fstream::out | std::fstream::trunc);
+	
 	if (!OpenSuccess(filestr))
 		return;
 
