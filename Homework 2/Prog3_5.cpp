@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include "Constants.h"
 #include <Windows.h>
 const int firstRusLet = -65;
 const int lastRusLet = 0;
@@ -20,9 +19,7 @@ void Prog3_5()
 
     for (auto i = 0; i < letters.length(); i++) 
     {
-        std::cout << letters[i] << "  " << (int)letters[i];
-
-        if (!isalpha(letters[i]) && letters[i] < firstRusLet && letters[i] > lastRusLet)
+        if (!isalpha(letters[i]) && (letters[i] < firstRusLet || letters[i] > lastRusLet))
         {
             std::cout << "Введён неверный символ" << std::endl;
             return;

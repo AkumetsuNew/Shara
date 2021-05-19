@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <string>
 #include <cmath>
 // Исправить проценты не больше 100
 // Сделано
