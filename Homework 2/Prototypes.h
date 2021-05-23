@@ -26,5 +26,6 @@ void Prog5_4_1();
 void Prog5_4_2();
 void Prog5_5();
 void StrucNum();
+void Series();
 
 #endif

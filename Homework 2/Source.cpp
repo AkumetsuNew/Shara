@@ -29,7 +29,8 @@ enum string_code
     eProg5_4_1,
     eProg5_4_2,
     eProg5_5,
-    eStrucNum
+    eStrucNum,
+    eSeries
 };
 
 string_code hashStringtoEnum(std::string const& inString)
@@ -58,6 +59,7 @@ string_code hashStringtoEnum(std::string const& inString)
     if (inString == "5.4.2") return eProg5_4_2;
     if (inString == "5.5") return eProg5_5;
     if (inString == "StrucNum") return eStrucNum;
+    if (inString == "Series") return eSeries;
     return eDefault;
 }
 
@@ -153,6 +155,9 @@ int main()
             break;
         case eStrucNum:
             StrucNum();
+            break;
+        case eSeries:
+            Series();
             break;
 
 
