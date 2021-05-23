@@ -90,6 +90,9 @@
     <ClCompile Include="Prog5_5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StrucNum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constants.h">
