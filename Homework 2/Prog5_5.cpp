@@ -173,7 +173,7 @@ std::vector<std::string> SortFile(std::fstream& fs, const int& sortType)
 			{
 				if (vecIt + 1 != fileContents.end())
 				{
-					if ((*vecIt).substr(0, (*vecIt).find_first_of(' ')) > (*(vecIt + 1)).substr(0, (*(vecIt + 1)).find_first_of(' ')))
+					if (vecIt->substr(0, vecIt->find_first_of(' ')) > ((vecIt + 1)->substr(0, (vecIt + 1)->find_first_of(' '))))
 					{
 						swapHappened = true;
 						std::iter_swap(vecIt, vecIt + 1);
@@ -190,7 +190,8 @@ std::vector<std::string> SortFile(std::fstream& fs, const int& sortType)
 			{
 				if (vecIt + 1 != fileContents.end())
 				{
-					if ((*vecIt).substr((*vecIt).find_first_of(' ')) > (*(vecIt + 1)).substr((*(vecIt + 1)).find_first_of(' ')))
+					if (vecIt->substr(vecIt->find_last_of(' ') + 1) > (vecIt + 1)->substr((vecIt + 1)->find_last_of(' ') + 1))
+					//if ((*vecIt).substr( (*vecIt).find_first_of(' ') + 1 ) > (*(vecIt + 1)).substr( (*(vecIt + 1)).find_first_of(' ') + 1 ))
 					{
 						swapHappened = true;
 						std::iter_swap(vecIt, vecIt + 1);
@@ -221,7 +222,7 @@ void Prog5_5()
 
 	std::cout << "\n" << inputWhole;
 
-	if (!FileIsEmpty(studentDataFile))
+	if (!FileIsEmpty(studentDataFile) && !inputWhole.empty())
 	{
 		std::cout << "Хотите очистить файл? (y/n)\n";
 		std::cin >> fileClear;
@@ -231,7 +232,8 @@ void Prog5_5()
 	else
 	{
 		fs.open(studentDataFile, std::fstream::out | std::fstream::app);
-		fs << "\n";
+		if (!inputWhole.empty())
+			fs << "\n";
 	}
 
 	if (!OpenSuccess(fs))
