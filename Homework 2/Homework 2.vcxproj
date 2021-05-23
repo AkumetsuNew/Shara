@@ -165,6 +165,7 @@
     <ClCompile Include="Prog5_4_2.cpp" />
     <ClCompile Include="Prog5_5.cpp" />
     <ClCompile Include="Series.cpp" />
+    <ClCompile Include="Sort.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="StrucNum.cpp" />
   </ItemGroup>
